@@ -21,8 +21,12 @@ A robust RESTful API built with Flask that integrates with the OpenWeatherMap AP
 
 ## 📂 Project Structure
 ```text
-/weather_api_project
-├── app.py             # API Endpoints and logic
-├── db_config.py       # DB Connection pooling and query helpers
-├── README.md          # Documentation
-└── requirements.txt   # Dependencies
+weather_api_project/
+├── venv/                 # Virtual environment (created via python -m venv venv)
+├── .env                  # Environment variables (from your screenshot)
+├── .gitignore            # Git ignore file (from your screenshot)
+├── app.py                # Main Flask API code (with fetch/history routes)
+├── db_config.py          # Database pooling and helper functions (CRUD/Fetch)
+├── requirements.txt      # Dependencies (flask, flasgger, psycopg2-binary, requests)
+└── README.md             # The documentation file below
+
