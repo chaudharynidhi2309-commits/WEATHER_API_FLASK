@@ -1,3 +1,8 @@
+# Environment Variables
+.env
+.env.local
+*.env
+
 # Virtual Environment
 venv/
 env/
@@ -10,10 +15,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-
-# Environment Variables
-.env
-.env.local
 
 # IDE
 .vscode/
@@ -36,7 +37,7 @@ Thumbs.db
 instance/
 .webassets-cache
 
-# Distribution / packaging
+# Distribution
 dist/
 build/
 *.egg-info/

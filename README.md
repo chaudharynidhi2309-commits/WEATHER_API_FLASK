@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌦️ Weather API - Flask & PostgreSQL with Connection Pooling
 
 A robust RESTful API built with Flask that integrates with the OpenWeatherMap API to fetch live weather data. This project demonstrates clean code principles, database connection pooling for high performance, and automated API documentation.
@@ -30,3 +31,90 @@ weather_api_project/
 ├── requirements.txt      # Dependencies (flask, flasgger, psycopg2-binary, requests)
 └── README.md             # The documentation file below
 
+=======
+# Weather API
+
+A professional RESTful API for fetching and storing weather data.
+
+## Features
+
+- 🌤️ Fetch live weather data from OpenWeatherMap API
+- 💾 Store weather logs in PostgreSQL
+- 📊 Retrieve historical weather data
+- 📚 Interactive Swagger documentation
+- 🔒 Secure environment variable configuration
+
+## Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/weather-api-project.git
+cd weather-api-project
+```
+
+### 2. Create virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure environment variables
+
+Create a `.env` file in the project root:
+```env
+DB_NAME=weather_db
+DB_USER=postgres
+DB_PASSWORD=your_password
+DB_HOST=127.0.0.1
+DB_PORT=5432
+
+WEATHER_API_KEY=your_api_key
+WEATHER_API_URL=https://api.openweathermap.org/data/2.5/weather
+
+FLASK_HOST=0.0.0.0
+FLASK_PORT=8089
+FLASK_DEBUG=False
+```
+
+### 5. Create database table
+```sql
+CREATE TABLE weather_logs (
+    id SERIAL PRIMARY KEY,
+    city_name VARCHAR(100) NOT NULL,
+    temp NUMERIC,
+    humidity NUMERIC,
+    recorded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### 6. Run the application
+```bash
+python app.py
+```
+
+## API Endpoints
+
+- `GET /` - Health check
+- `POST /weather/fetch/<city>` - Fetch and store weather data
+- `GET /weather/history/<city>` - Get weather history
+
+## Documentation
+
+Access Swagger UI at: `http://localhost:8089/apidocs/`
+
+## Tech Stack
+
+- **Backend**: Flask
+- **Database**: PostgreSQL
+- **API Documentation**: Flasgger (Swagger)
+- **External API**: OpenWeatherMap
+
+## License
+
+MIT
+>>>>>>> 06d7e52 (Fixed column mismatch error and updated project structure)
